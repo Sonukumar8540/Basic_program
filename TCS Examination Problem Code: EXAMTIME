@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+while(t--)
+{
+    int dsa1,dsa2,toc1,toc2,dm1,dm2,s1,s2;
+    cin>>dsa1>>toc1>>dm1;
+    cin>>dsa2>>toc2>>dm2;
+           s1=dsa1+toc1+dm1;
+        s2=dsa2+toc2+dm2;
+        if(s1>s2)
+       { 
+           cout<<"DRAGON"<<endl;
+           continue;
+       }
+       else if(s1==s2)
+       {
+           if(dsa1>dsa2)
+           {
+               cout<<"DRAGON"<<endl;
+               continue;
+           }
+             else if(dsa1==dsa2)
+              {
+                  if(toc1>toc2)
+                  {
+                      cout<<"DRAGON"<<endl;
+                      continue;
+                  }
+                    else if(toc1==toc2)
+                     {
+                         if(dm1>dm2)
+                         {
+                             cout<<"DRAGON"<<endl;
+                             continue;
+                         }
+                           else if(dm1==dm2)
+                            {
+                                cout<<"TIE"<<endl;
+                                continue;
+                            }
+                            else
+                            {
+                                cout<<"SLOTH"<<endl;
+                                 continue;
+                            }
+                     }
+                     else
+                      {
+                          cout<<"SLOTH"<<endl;
+                            continue;
+                      }
+              }
+              else
+              {
+                  cout<<"SLOTH"<<endl;
+               continue;
+              }
+       }
+       else
+            {
+               cout<<"SLOTH"<<endl;
+               continue;
+            }
+    
+}
+
+	return 0;
+}
